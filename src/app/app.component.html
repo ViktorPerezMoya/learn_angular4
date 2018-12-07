@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+      {{ title }}!
+  </h1>
+</div>
+<nav>
+  <a [routerLink] = "['/pagina-principal']" [routerLinkActive] = "['menu-activado']">Home</a>
+  <a [routerLink] = "['/frutas']" [routerLinkActive] = "['menu-activado']">Frutas</a>
+  <a [routerLink] = "['/empleado']" [routerLinkActive] = "['menu-activado']">Empleado</a>
+  <a [routerLink] = "['/contacto']" [routerLinkActive] = "['menu-activado']">Contacto</a>
+</nav>
+<!-- se cargaran los componentes dinamicamente segun el menu en el que se encuentra -->
+<router-outlet></router-outlet>

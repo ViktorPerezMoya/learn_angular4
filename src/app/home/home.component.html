@@ -1,0 +1,27 @@
+<h2>{{titulo}}</h2>
+<h3>Pipes con Date</h3>
+<p>{{fecha | date: 'dd/MM/yyyy'}}</p>
+<p>{{ fecha | date: 'shortDate' | uppercase }}</p>
+<h3>Pipes en texto</h3>
+<p>{{ texto_prueba | uppercase }}</p>
+<p>{{ texto_prueba | lowercase }}</p>
+<p>{{ texto_prueba | titlecase }}</p>
+<hr>
+<h3>Pipe Personalizado</h3>
+<label>Numero decimal a convertir: </label>
+<input type="number" min="0" [(ngModel)]="numero_decimal">
+<pre>
+    El numero decimal en base: {{ numero_decimal | convertirBase: 16}}
+</pre>
+<hr>
+<input type="text" [(ngModel)]="ropa_nombre">
+<button (click)="agregarRopa()">Agregar Ropa</button>
+<pre *ngIf="ropa_nombre">
+    La ropa a agregar es: <strong>{{ropa_nombre}}</strong>
+</pre>
+<ul>
+    <li *ngFor="let ropa of lista_ropa; let i = index ">
+        {{ ropa }}
+        <button (click)="eliminarRopa(i)">Eliminar</button>
+    </li>
+</ul>

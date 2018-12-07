@@ -1,0 +1,8 @@
+<h2>{{titulo}}</h2>
+<p *ngIf="mensaje">
+    El mensaje recivido fue: {{mensaje}}
+</p>
+<div *ngIf="!mensaje">
+    <button (click)="redirigirHome()">Ir a Home</button>
+    <button (click) = "redirigir()">Ir a contacto con parametro</button>
+</div>
